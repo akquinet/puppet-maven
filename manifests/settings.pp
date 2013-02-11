@@ -26,6 +26,7 @@ define maven::settings( $home = undef,
                         $interactive_mode = true,
                         $use_plugin_registry = false,
                         $offline = false,
+                        $plugin_groups = [],
                         $profiles = [] ) {
 
   if $home == undef {

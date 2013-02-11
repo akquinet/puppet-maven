@@ -9,6 +9,14 @@
   <usePluginRegistry><%= use_plugin_registry %></usePluginRegistry>
   <offline><%= offline %></offline>
 
+<%- unless plugin_groups.empty? -%>
+<pluginGroups>
+  <%- plugin_groups.each do |pg| -%>
+  <pluginGroup><%= pg %></pluginGroup>
+  <%- end -%>
+</pluginGroups>
+<%- end -%>
+
 <% unless mirrors.empty? -%>
   <mirrors>
 <% mirrors.each do |mirror| -%>
