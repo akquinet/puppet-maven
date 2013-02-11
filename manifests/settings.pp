@@ -26,7 +26,7 @@ define maven::settings( $home = undef,
                         $interactive_mode = '',
                         $use_plugin_registry = '',
                         $offline = '',
-                        $profiles => [] ) {
+                        $profiles = [] ) {
 
   if $home == undef {
     $home_real = $user ? {
