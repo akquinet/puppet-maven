@@ -23,9 +23,9 @@ define maven::settings( $home = undef,
                         $default_repo_config = {}, 
                         $properties = {}, 
                         $local_repo = '', 
-                        $interactive_mode = '',
-                        $use_plugin_registry = '',
-                        $offline = '',
+                        $interactive_mode = true,
+                        $use_plugin_registry = false,
+                        $offline = false,
                         $profiles = [] ) {
 
   if $home == undef {
