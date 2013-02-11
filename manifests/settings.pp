@@ -16,7 +16,7 @@
 #
 # A puppet recipe to set the contents of the settings.xml file
 #
-define maven::settings( $home = undef, $user = 'root', $settings_file = template('maven/settings.xml.erb') $servers = [], $mirrors = [], $default_repo_config = {}, $properties = {}, $local_repo = '' ) {
+define maven::settings( $home = undef, $user = 'root', $settings_file = template('maven/settings.xml.erb'), $servers = [], $mirrors = [], $default_repo_config = {}, $properties = {}, $local_repo = '' ) {
 
   if $home == undef {
     $home_real = $user ? {
