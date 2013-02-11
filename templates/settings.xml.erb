@@ -3,8 +3,20 @@
 
 <%- unless local_repo.empty? -%>
   <localRepository><%= local_repo %></localRepository>
-
 <%- end -%>
+
+<%- unless interactive_mode.empty? -%>
+  <interactiveMode><%= interactive_mode %></interactiveMode>
+<%- end -%>
+
+<%- unless use_plugin_registry.empty? -%>
+  <usePluginRegistry><%= use_plugin_registry %></usePluginRegistry>
+<%- end -%>
+
+<%- unless offline.empty? -%>
+  <offline><%= offline %></offline>
+<%- end -%>
+
 <% unless mirrors.empty? -%>
   <mirrors>
 <% mirrors.each do |mirror| -%>
